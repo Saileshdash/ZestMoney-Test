@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.function.Function;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -73,7 +75,22 @@ public class BrowserUtil {
 	}
 	
 	public void mouseOverAndClcik(WebElement element) {
+		
 		actions.moveToElement(element).click().build().perform();
+	}
+	
+	public void selectRating(WebElement element, Integer rating) {
+		if(rating.equals(1)) {
+			actions.moveToElement(element, -50, 0).click().build().perform();
+		}else if(rating.equals(2)) {
+			actions.moveToElement(element, -25, 0).click().build().perform();
+		}else if(rating.equals(3)) {
+			actions.moveToElement(element, 0, 0).click().build().perform();
+		}else if(rating.equals(4)) {
+			actions.moveToElement(element, 25, 0).click().build().perform();
+		}else if(rating.equals(5)) {
+			actions.moveToElement(element, 50, 0).click().build().perform();
+		}
 	}
 	
 	public void selectValueFromDropDown(WebElement element, String value) {

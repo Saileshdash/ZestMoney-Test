@@ -4,9 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.zestmoney.testscripts.TestTripAdvisorReview"/>
-      <class name="com.zestmoney.util.BaseTest"/>
       <class name="com.zestmoney.testscripts.TestIphonePrice"/>
-      <class name=".TestDemo"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

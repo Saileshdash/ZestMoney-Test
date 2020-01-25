@@ -36,7 +36,7 @@ public class TestTripAdvisorReview extends BaseTest{
 		tripAdvisiorPage.writeReviewButton.click();
 		browserUtil.switchToWindow(3);
 		browserUtil.waitForElementToBeVisible(tripAdvisiorPage.bubbleRating, 10);
-		browserUtil.mouseOverAndClcik(tripAdvisiorPage.bubbleRating);
+		browserUtil.selectRating(tripAdvisiorPage.bubbleRating,5);
 		tripAdvisiorPage.reviewTitle.sendKeys("Dummy Review Title for Zest Money");
 		tripAdvisiorPage.reviewText.sendKeys("Recently I visited Club Mahindra ,Coorg with my family. Everything was spot on right from the rooms, facilities,children's play area. Me and my family visited Club Mahindra, Madikeri on Jan 20-24, 2020. This is a beautiful resort. Set amidst nature, we could see greenery...");
 		tripAdvisiorPage.couplesSortOfTrip.click();

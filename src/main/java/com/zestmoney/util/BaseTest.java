@@ -13,7 +13,7 @@ public class BaseTest {
 	
 	@BeforeClass
 	public void initBastTest() throws IOException{
-		System.setProperty("webdriver.chrome.driver", "E:\\Testing\\SELENIUM\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\driver\\chromeDriver\\windows\\chromedriver.exe");
 		driver = new ChromeDriver();
 	}
 	
