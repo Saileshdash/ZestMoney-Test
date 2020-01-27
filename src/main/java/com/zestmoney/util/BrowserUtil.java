@@ -5,8 +5,6 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.function.Function;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,19 +15,21 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class BrowserUtil {
 
 	WebDriver driver;
 	WebDriverWait wait;
 	Wait<WebDriver> fluentWait; 
 	Actions actions;
-
+	private static final TestLogger LOGGER = TestLogger.getLogger(BrowserUtil.class);
 	public BrowserUtil(WebDriver driver){
 		this.driver = driver;
 		actions = new Actions(driver);
 	}
 
 	public void waitForElementToBeVisible(WebElement element, int timeDuration) {
+		LOGGER.logInfo("Waiting for Element to be visible.");
 		wait = new WebDriverWait(driver, timeDuration);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}

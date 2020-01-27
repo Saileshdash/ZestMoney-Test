@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <appender name="consolelog" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param value="%d{ISO8601} [%-t] %-5p %-36c{1}%m%n" name="ConversionPattern"/>
+        </layout>
+    </appender>
+    
+     <appender name="webdriverlog" class="org.apache.log4j.rolling.RollingFileAppender">
+        <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+            <param name="FileNamePattern" value="src/main/resources/logfiles/zestmoney-%d{yyyyMMdd}.log"/>
+        </rollingPolicy>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss z} [%-t] %-5p %-36c{1}%m%n"/>
+        </layout>
+    </appender>
+    
+    <logger name="org.openqa.selenium">
+        <level value="FATAL"/>
+        <appender-ref ref="consolelog"/>
+    </logger>
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="consolelog"/>
+          <appender-ref ref="webdriverlog"/>
+    </root>    
+</log4j:configuration>

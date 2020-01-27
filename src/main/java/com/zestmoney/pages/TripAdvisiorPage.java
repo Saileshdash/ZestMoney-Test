@@ -44,13 +44,13 @@ public class TripAdvisiorPage {
 	@FindBy(how = How.ID, using="ReviewText")
 	public WebElement reviewText;
 	
-	@FindBy(how = How.ID, using="bubble_rating")
+	@FindBy(how = How.ID, using="qid12_bubbles")
 	public WebElement hotelRatingForService;
 	
-	@FindBy(how = How.ID, using="bubble_rating")
+	@FindBy(how = How.ID, using="qid190_bubbles")
 	public WebElement hotelRatingForCleanliness;
 	
-	@FindBy(how = How.ID, using="bubble_rating")
+	@FindBy(how = How.ID, using="qid47_bubbles")
 	public WebElement hotelRatingForLocation;
 	
 	@FindBy(how = How.ID, using="noFraud")
