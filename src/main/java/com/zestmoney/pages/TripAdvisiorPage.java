@@ -47,7 +47,7 @@ public class TripAdvisiorPage {
 	@FindBy(how = How.ID, using="qid12_bubbles")
 	public WebElement hotelRatingForService;
 	
-	@FindBy(how = How.ID, using="qid190_bubbles")
+	@FindBy(how = How.XPATH, using="//*[@id='qid190_bubbles']")
 	public WebElement hotelRatingForCleanliness;
 	
 	@FindBy(how = How.ID, using="qid47_bubbles")
