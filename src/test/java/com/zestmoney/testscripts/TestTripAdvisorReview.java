@@ -58,11 +58,11 @@ public class TestTripAdvisorReview extends BaseTest{
 		LOGGER.logInfo("Select hotel rating for services.");
 		browserUtil.selectRating(tripAdvisiorPage.hotelRatingForService, 5);
 		browserUtil.waitForElementToBeVisible(tripAdvisiorPage.hotelRatingForCleanliness, 10);
-		LOGGER.logInfo("Select hotel rating for Cleanliness.");
-		browserUtil.selectRating(tripAdvisiorPage.hotelRatingForCleanliness, 5);
-		browserUtil.waitForElementToBeVisible(tripAdvisiorPage.hotelRatingForLocation, 10);
-		LOGGER.logInfo("Select hotel rating for location.");
-		browserUtil.selectRating(tripAdvisiorPage.hotelRatingForLocation, 5);
+		//LOGGER.logInfo("Select hotel rating for Cleanliness.");
+		//browserUtil.selectRating(tripAdvisiorPage.hotelRatingForCleanliness, 5);
+		//browserUtil.waitForElementToBeVisible(tripAdvisiorPage.hotelRatingForLocation, 10);
+		//LOGGER.logInfo("Select hotel rating for location.");
+		//browserUtil.selectRating(tripAdvisiorPage.hotelRatingForLocation, 5);
 		LOGGER.logInfo("Check in \"Submit your review\" check box.");
 		tripAdvisiorPage.submitReviewCheckbox.click();
 		LOGGER.logInfo("click on \"Submit your review\" button.");
